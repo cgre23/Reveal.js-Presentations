@@ -13,20 +13,19 @@
 		<link rel="stylesheet" href="../dist/theme/reveal_override_vd.css" id="theme"/>
 		<script src="plugin/highlight/highlight.js"></script>
 		<style>
-			
 		</style>
 	</head>
 
 	<body>
 		<div class="reveal">
+			<header style="position: absolute;top: 20px; left: 100px; z-index:500; font-size:10px;"></header>
+			<footer style="position: absolute; bottom: 5%;left: 5%;font-size: 18px; color: rgba(0, 0, 0, 0.5);"></footer>
 			<div class="slides">
 
 				<section>
 					<h2>Virtual Diagnostics at EuXFEL</h2><br><br><br><br><br><br>
-					<h4 align="left">Short Pulse Workshop, 21.11.2022</h4><br>
-					<p align="left">
-						<small>Christian Grech, MXL</small>
-					</p><br>
+					<h4 align="left">Joint Workshop on Short Pulses, 21.11.2022</h4><br>
+					<p align="left" style="font-size:28px" >Christian Grech, MXL</p><br>
 					<div class="r-hstack">
 						<img src="./logos/Helmholtz.png" width="150" height="30"> 
 						<p style="padding: 0em; background: #fff; margin: 0 18em 0 0em"></p>
@@ -36,20 +35,30 @@
 					</div><br><br>
 				</section>
 
-				<section >
+				<section data-state="footer1">
 					<h2 align="left">Outline</h2><br><br><br><br><br>
 					<ul align="left">
-						<li class="fragment"> Introduction </li>
-						<li class="fragment"> What is a Virtual Diagnostic? </li>
-						<li class="fragment"> Machine Learning based Virtual Diagnostics  </li>
-						<li class="fragment"> The EuXFEL case </li>
-						<li class="fragment"> Machine Learning Pipeline </li>
-						<li class="fragment"> Challenges and Future Prospects </li>
+						<li class="fragment" style="color:black;"> Introduction </li>
+						<li class="fragment" style="color:black;"> What is a Virtual Diagnostic? </li>
+						<li class="fragment" style="color:black;"> The EuXFEL data sources  </li>
+						<li class="fragment" style="color:black;"> Recent VD Applications  </li>
+						<li class="fragment" style="color:black;"> Challenges and Future Prospects </li>
+					</ul><br><br><br>
+				</section>
+
+				<section data-state="footer1" data-transition="none">
+					<h2 align="left">Outline</h2><br><br><br><br><br>
+					<ul align="left">
+						<li style="color:black;"> Introduction </li>
+						<li style="color:lightgray;"> What is a Virtual Diagnostic? </li>
+						<li style="color:lightgray;"> The EuXFEL data sources  </li>
+						<li style="color:lightgray;"> Recent VD Applications  </li>
+						<li style="color:lightgray;"> Challenges and Future Prospects </li>
 					</ul><br><br><br>
 				</section>
 
 
-				<section>
+				<section data-state="footer1">
 					<h2 align="left">Introduction</h2><br><br><br><br><br>
 					<ul align="left">
 						<li class="fragment"> 1. </li>
@@ -57,14 +66,25 @@
 					</ul>
 				</section>
 
-				<section data-auto-animate>
+				<section data-state="footer1" data-transition="none">
+					<h2 align="left">Outline</h2><br><br><br><br><br>
+					<ul align="left">
+						<li style="color:lightgray;"> Introduction </li>
+						<li style="color:black;"> What is a Virtual Diagnostic? </li>
+						<li style="color:lightgray;"> The EuXFEL data sources  </li>
+						<li style="color:lightgray;"> Recent VD Applications  </li>
+						<li style="color:lightgray;"> Challenges and Future Prospects </li>
+					</ul><br><br><br>
+				</section>
+
+				<section data-state="footer1" data-auto-animate>
 					<h2>What is a Virtual Diagnostic?</h2><br><br><br><br>
 					<img src="./figures/virtual.png" width="800" height="400">
 				</section>
 
 
 
-				<section>
+				<section data-state="footer1">
 					<h2>ML-based Virtual Diagnostics</h2>
 					<div class="r-stack">
 						<img src="./figures/screen1.png" width="750" height="520" class="fragment fade-in-then-out">
@@ -75,63 +95,18 @@
 
 
 
-				<section>
-					<h2 align="left">The EuXFEL case</h2><br>
+				<section data-state="footer1">
+					<h2 align="left">EuXFEL data sources</h2><br><br><br><br><br>
 					<ul align="left">
-						<li class="fragment"> HXRSS setup at 12.4 keV.</li>
-						<li class="fragment"> Increments of 0.5 eV with 10 second pauses.</li>
-						<li class="fragment"> Increasing pause time to 100 s. </li>
+						<li class="fragment"> DOOCS</li>
+						<li class="fragment"> DOOCS DAQ datastreams</li>
+						<li class="fragment"> Machine File Catalog</li>
 						<li class="fragment"> Decreasing steps over 100 eV. </li>
-						<li class="fragment"> Total durations ranging between 10 - 30 minutes. </li>
-					</ul><br>
-				</section>
-
-				<section>
-					<h2 align="left">Machine Learning Pipeline</h2><br><br><br>
-					<img src="./figures/pipeline.png" width="1200" height="110">
-					<ul>
-						<li class="fragment"> </li>
-						<li class="fragment">  </li>
-						<li class="fragment">  </li>
-						<li class="fragment">  </li>
-					</ul><br>
-				</section>
-
-				<section data-transition="fade-in">
-					<h2 align="left">Machine Learning Pipeline</h2><br><br><br>
-					<img src="./figures/pipeline_1.png" width="1200" height="110">
-					<ul>
-						<li class="fragment"></li>
-						<li class="fragment"></li>
-						<li class="fragment"></li>
-						<li class="fragment"></li>
-					</ul><br>
-				</section>
-
-				<section>
-					<h2 align="left">Machine Learning Pipeline</h2><br><br><br>
-					<img src="./figures/pipeline_2.png" width="1200" height="110">
-					<ul>
-						<li class="fragment"></li>
-						<li class="fragment"></li>
-						<li class="fragment"></li>
-						<li class="fragment"></li>
-					</ul><br>
-				</section>
-
-				<section data-transition="fade-in">
-					<h2 align="left">Machine Learning Pipeline</h2><br><br><br>
-					<img src="./figures/pipeline_3.png" width="1200" height="110">
-					<ul>
-						<li class="fragment"> </li>
-						<li class="fragment">  </li>
-						<li class="fragment">  </li>
-						<li class="fragment">  </li>
 					</ul><br>
 				</section>
 
 
-				<section data-transition="fade-in">
+				<section data-state="footer1" data-transition="fade-in">
 					<h2 align="left">Conclusion</h2><br><br><br><br>
 					<ul>
 						<li class="fragment"> </li>
@@ -181,11 +156,11 @@
 		</style>
 
 		<!-- 2. Create hidden header/footer <div> -->
-		<div id="hidden" style="display:none;">
+		<!--<div id="hidden" style="display:none;">
 			<div id="header">
 				<div id="footer-left">Virtual Diagnostics at EuXFEL | Christian Grech, MXL, 21.11.2022 </div>
 			</div>
-		</div>
+		</div> 
 
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script type="text/javascript">
@@ -199,6 +174,6 @@
 			else {
 				$('div.reveal').append(header);
 		}
-		</script>
+		</script> -->
 	</body>
 </html>

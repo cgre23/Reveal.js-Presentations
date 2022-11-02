@@ -32,7 +32,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-heading2-color: rgb(241, 143, 13);
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
-  --r-heading-text-transform: uppercase;
+  --r-heading-text-transform: none;
   --r-heading-text-shadow: none;
   --r-heading-font-weight: 600;
   --r-heading1-text-shadow: none;
@@ -175,7 +175,12 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .reveal ul {
   list-style-type: disc;
+  list-style: none
 }
+
+li::before {content: ">"; color: orange;
+  display: inline-block; width: 1em;
+  margin-left: -1em}
 
 .reveal ul ul {
   list-style-type: square;
@@ -435,6 +440,9 @@ hr {
   border: 1px solid rgb(241, 143, 13);
 }
 
+li{
+  margin: 18px 0;
+}
 
 .reveal.slide .slides > section, .reveal.slide .slides > section > section {
   min-height: 100% !important;
@@ -456,3 +464,17 @@ section > h1, section > h2 {
   min-height: 770px !important;
   position: relative !important;
 }
+
+
+
+.header1 header:after { 
+  content: "Header 1 Example"; }
+
+
+
+.footer1 footer:after { 
+  content: "Virtual Diagnostics at EuXFEL | Christian Grech, 21.11.2022"; 
+  background: url(/slides/logos/dotlogo.png);
+  font-family: var(--r-main-font);
+}
+
