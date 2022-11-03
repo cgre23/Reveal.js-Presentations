@@ -478,3 +478,32 @@ section > h1, section > h2 {
   font-family: var(--r-main-font);
 }
 
+.box{
+  text-align: left;
+  margin-left: 0cm;
+  width: 800px;
+  height: 50px;
+  background-color:rgb(242, 170, 75);
+  border: 3px solid black;
+  padding: 0.1cm;
+  padding-top: 0.2cm;
+
+  } 
+
+  #col-1 {
+    position: fixed;
+    width: 50%;
+    left: 0;
+    height: 100%;
+    z-index: 1010101010
+  }
+  
+  #col-2 {
+    position: fixed;
+    width: 50%;
+    left: 50%;
+    height: 100%;
+    z-index: 1010101010
+  }
+
+
