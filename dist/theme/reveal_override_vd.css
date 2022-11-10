@@ -3,18 +3,17 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
-@import url(./fonts/source-sans-pro/source-sans-pro.css);
+
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
   color: #fff;
 }
 
 @font-face {
        font-family: "DesySans";
-       src: url("./fonts/DesySansOfficeCn-Regular.ttf")  format("truetype");}
+       src: url("../theme/fonts/DesySansOfficeCn-Regular.ttf")  format("truetype");}
 @font-face {
        font-family: "DesySansBold";
-       src: url("./fonts/DesySansOfficeCn-Bold.ttf")  format("truetype");}
-
+       src: url("../theme/fonts/DesySansOfficeCn-Bold.ttf")  format("truetype");}
 
 
 /*********************************************
@@ -27,7 +26,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-main-color: #000;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 0px 0;
-  --r-heading-font: DesySansBold, Helvetica, sans-serif;
+  --r-heading-font: DesySansBold, sans-serif;
   --r-heading-color: #009fdf;
   --r-heading2-color: rgb(241, 143, 13);
   --r-heading-line-height: 1.2;
@@ -476,7 +475,6 @@ section > h1, section > h2 {
 
 .header1 header:after { 
   content: "Header 1 Example"; }
-
 
 
 .footer1 footer:after { 
