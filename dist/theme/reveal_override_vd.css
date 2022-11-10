@@ -26,7 +26,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-main-font-size: 34px;
   --r-main-color: #000;
   --r-block-margin: 20px;
-  --r-heading-margin: 0 0 20px 0;
+  --r-heading-margin: 0 0 0px 0;
   --r-heading-font: DesySansBold, Helvetica, sans-serif;
   --r-heading-color: #009fdf;
   --r-heading2-color: rgb(241, 143, 13);
@@ -148,7 +148,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal img,
 .reveal video,
 .reveal iframe {
-  max-width: 99%;
+  max-width: 101%;
   max-height: 95%;
 }
 
@@ -175,7 +175,9 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .reveal ul {
   list-style-type: disc;
-  list-style: none
+  list-style: none;
+  text-align: left;
+  
 }
 
 li::before {content: ">"; color: orange;
@@ -183,11 +185,15 @@ li::before {content: ">"; color: orange;
   margin-left: -1em}
 
 .reveal ul ul {
-  list-style-type: square;
+  list-style-type: disc;
+  list-style: none;
+  text-align: left;
 }
 
 .reveal ul ul ul {
-  list-style-type: circle;
+  list-style-type: disc;
+  list-style: none;
+  text-align: left;
 }
 
 .reveal ul ul,
@@ -195,7 +201,8 @@ li::before {content: ">"; color: orange;
 .reveal ol ol,
 .reveal ol ul {
   display: block;
-  margin-left: 40px;
+  margin-left: 0px;
+  text-align: justify;
 }
 
 .reveal dt {
@@ -481,12 +488,12 @@ section > h1, section > h2 {
 .box{
   text-align: left;
   margin-left: 0cm;
-  width: 800px;
-  height: 50px;
-  background-color:rgb(242, 170, 75);
-  border: 3px solid black;
-  padding: 0.1cm;
-  padding-top: 0.2cm;
+  width: 900px;
+  height: 60px;
+  background-color:rgb(243, 192, 125);
+  border: 2px solid black;
+  padding: 0cm;
+  padding-top: 0cm;
 
   } 
 

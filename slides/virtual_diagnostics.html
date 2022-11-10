@@ -23,9 +23,9 @@
 			<div class="slides">
 
 				<section>
-					<h2>Virtual Diagnostics at EuXFEL</h2><br><br><br><br><br><br>
+					<h2>Virtual Diagnostics at EuXFEL</h2><br><br><br><br><br><br><br>
 					<h4 align="left">Joint Workshop on Short Pulses, 21.11.2022</h4><br>
-					<p align="left" style="font-size:28px" >Christian Grech, MXL</p><br>
+					<p align="left" style="font-size:26px" >Christian Grech, MXL</p><br>
 					<div class="r-hstack">
 						<img src="./logos/Helmholtz.png" width="150" height="30"> 
 						<p style="padding: 0em; background: #fff; margin: 0 18em 0 0em"></p>
@@ -61,8 +61,9 @@
 				<section data-state="footer1">
 					<h2 align="left">Introduction</h2><br><br><br><br><br>
 					<ul align="left">
-						<li class="fragment"> 1. </li>
-
+						<li class="fragment"> X-ray FEL control and optimization requires detailed and on-the-fly insight on the driving electron beam. </li>
+						<li class="fragment"> Increasing demands for high intensity and very short pulse duration pose a challenge for the effectiveness, and accuracy of traditional diagnostic methods. </li>
+						<li class="fragment"> This requires an update to the current suite of diagnostics.</li>
 					</ul>
 				</section>
 
@@ -92,65 +93,82 @@
 					  </div>
 				</section>
 
-
-
-				<section data-state="footer1">
-					<h2>ML-based Virtual Diagnostics</h2>
-					<div class="r-stack">
-						<img src="./figures/screen1.png" width="750" height="520" class="fragment fade-in-then-out">
-						<img src="./figures/screen2.png" width="750" height="520" class="fragment fade-in-then-out">
-						<img src="./figures/screen0.png" width="520" height="540" class="fragment fade-in-then-out">
-					</div>
+				<section data-state="footer1" data-transition="none">
+					<h2 align="left">Outline</h2><br><br><br><br><br>
+					<ul align="left">
+						<li style="color:lightgray;"> Introduction </li>
+						<li style="color:lightgray;"> What is a Virtual Diagnostic? </li>
+						<li style="color:black;"> The EuXFEL data sources  </li>
+						<li style="color:lightgray;"> Recent VD Applications  </li>
+						<li style="color:lightgray;"> Challenges and Future Prospects </li>
+					</ul><br><br><br>
 				</section>
 
 
-
 				<section data-state="footer1">
-					<h2 text-align="left">EuXFEL data sources</h2><br><br><br><br><br>
+					<h2 text-align="left">The EuXFEL data sources</h2><br><br><br><br><br>
 					<ul text-align="left">
-						<li class="fragment"> DOOCS histories</li>
+						<li class="fragment"> DOOCS and Karabo control systems</li>
+						<ul>
+							<li class="fragment" style="font-size: 22px;">Black tea</li>
+						  </ul>
 						<li class="fragment"> DOOCS DAQ datastreams</li>
 						<li class="fragment"> Machine File Catalog</li>
 					</ul><br>
 				</section>
 
+				<section data-state="footer1" data-transition="none">
+					<h2 align="left">Outline</h2><br><br><br><br><br>
+					<ul align="left">
+						<li style="color:lightgray;"> Introduction </li>
+						<li style="color:lightgray;"> What is a Virtual Diagnostic? </li>
+						<li style="color:lightgray;"> The EuXFEL data sources  </li>
+						<li style="color:black;"> Recent VD Applications  </li>
+						<li style="color:lightgray;"> Challenges and Future Prospects </li>
+					</ul><br><br><br>
+				</section>
+
 				<section data-state="footer1">
-					<h2 text-align="left">Online Optics Matching at Injection</h2><br><br><br>
-					<p style="font-size:28px;color:rgb(241, 143, 13);">Z. H. Zhu, S. Tomin, Y. Chen, W. L. Qin, M. Scholz</p>
+					<h2 style="font-size:48px;font-weight: bold;">Online Optics Matching at Injection</h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">Z. H. Zhu, S. Tomin, Y. Chen, W. L. Qin, M. Scholz</p><br>
 					<div class="r-hstack">
-						<img src="./figures/zhu1.png" width="2620">
+						<div class="r-stack">
+							<img src="./figures/zhu1.png" width="2620">
+						</div>
 						<ul text-align="justify">
 							<li text-align="justify" style="font-size:22px;" class="fragment"> Surrogate model based on a deep neural network architecture.</li>
 							<li text-align="justify" style="font-size:22px;" class="fragment"> Model is trained with 190,000 simulation results.</li>
 							<li text-align="justify" style="font-size:22px;" class="fragment"> Tested in the control room and verified with OCELOT simulations and optics measurements. </li>
 						</ul>
 					</div>
+					<div style="font-size:13px; position: absolute; bottom: 20px; right: -100px; width: 600px; text-align:right;">
+						Machine learning based surrogate model construction for optics matching at the European XFEL. In Proc. IPAC’22, Bangkok, Thailand,  MOPOTK013
+					</div>
 				</section>
 
 
 				<section data-state="footer1">
-					<h2 text-align="left">X-Ray Property Prediction</h2><br><br><br>
-					<p style="font-size:28px;color:rgb(241, 143, 13);">C. Grech, F. Jafarinia, G. Geloni, T. Guest, M. Guetg</p><br><br>
-					<ul text-align="left">
-						<li class="fragment"> DOOCS histories</li>
-						<li class="fragment"> DOOCS DAQ datastreams</li>
-						<li class="fragment"> Machine File Catalog</li>
-					</ul><br>
+					<h2 style="font-size:48px;font-weight: bold;">Longitudinal Phase Space Prediction</h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">Z. H. Zhu, S. Tomin, J. Kaiser</p>
+					<div class="r-hstack">
+						<div class="r-stack">
+							<img class="fragment fade-in" data-fragment-index="1" src="./figures/zhu2.png" width="2600">
+							<img class="fragment" data-fragment-index="4" src="./figures/zhu3.png" width="2600">
+						</div>
+						<ul text-align="justify">
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="2"> Beam distribution simulated with ASTRA and OCELOT.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="3"> Three slice beam property distributions are predicted using an ANN. Fast but performance can be enhanced.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="5"> Using a Convolutional Encoder-Decoder, one can obtain better results but with a slower training time. </li>
+						</ul>
+					</div>
+					<div style="font-size:13px; position: absolute; bottom: 20px; right: -100px; width: 600px; text-align:right;">
+						Application of machine learning in longitudinal phase space prediction at the European XFEL. In Proc. FEL’22, Trieste, Italy, WEP12
+					</div>
 				</section>
 
 				<section data-state="footer1">
-					<h2 text-align="left">Longitudinal Phase Space Prediction</h2><br><br><br>
-					<p style="font-size:28px;color:rgb(241, 143, 13);">Z. H. Zhu, S. Tomin, J. Kaiser</p><br><br>
-					<ul text-align="left">
-						<li class="fragment"> DOOCS histories</li>
-						<li class="fragment"> DOOCS DAQ datastreams</li>
-						<li class="fragment"> Machine File Catalog</li>
-					</ul><br>
-				</section>
-
-				<section data-state="footer1">
-					<h2 text-align="left">Current and LPS reconstruction based on CRISP data </h2><br><br><br>
-					<p style="font-size:28px;color:rgb(241, 143, 13);">J. Kaiser, S. Tomin</p>
+					<h2 style="font-size:44px;" text-align="left">Current, LPS reconstruction based on CRISP data </h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">J. Kaiser, S. Tomin</p><br>
 					<div class="r-hstack">
 						<img src="./figures/VDcrisp.png" width="3000px">
 						<ul text-align="justify">
@@ -161,16 +179,42 @@
 				</section>
 
 				<section data-state="footer1">
-					<h2 text-align="left" style="font-size:52px;font-weight: bold;">Physics-Based Absolute Energy Calibration</h2><br><br><br>
-					<p style="font-size:28px;color:rgb(241, 143, 13);">C. Grech, G. Geloni, M. Guetg</p><br><br>
-					<ul text-align="left">
-						<li class="fragment"> DOOCS histories</li>
-						<li class="fragment"> DOOCS DAQ datastreams</li>
-						<li class="fragment"> Machine File Catalog</li>
-					</ul><br>
+					<h2 text-align="left" style="font-size:48px;font-weight: bold;">Energy Calibration of Bragg crystal setups</h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">C. Grech, G. Geloni, M. Guetg</p><br>
+					<div class="r-hstack">
+						<img src="./figures/AbsCalibration.drawio.svg" width="4000px">
+						<ul text-align="justify">
+							<li text-align="justify" style="font-size:24px;" class="fragment"> A measurement model is calibrated with historical scans.</li>
+							<li text-align="justify" style="font-size:24px;" class="fragment"> Extracting features from measurements, reflections can be identified using a classifier and the actual photon energy determined.</li>
+						</ul>
+					</div>
+					<div style="font-size:13px; position: absolute; bottom: 20px; right: -100px; width: 600px; text-align:right;">
+						Machine Learning Applied for the Calibration of the Hard X-Ray Single-Shot Spectrometer at the European XFEL, in Proc. IPAC'22, Bangkok, Thailand, Jun. 2022, TUPOST046
+					</div>
 				</section>
 
+				<section data-state="footer1">
+					<h2 style="font-size:48px;font-weight: bold;">X-Ray Pulse Prediction </h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">C. Grech, F. Jafarinia, G. Geloni, T. Guest, M. Guetg</p>
+					<div class="r-hstack">
+						<img src="./figures/DL.svg" width="3600px">
+						<ul text-align="justify">
+							<li text-align="justify" style="font-size:24px;" class="fragment"> Undulator properties are used to predict photon properties received at the experimental halls .</li>
+							<li text-align="justify" style="font-size:24px;" class="fragment"> Measurements at the SASE1 beamline have taken place in collaboration with SPB/SFX and data is being analysed.</li>
+						</ul>
+					</div>
+				</section>
 
+				<section data-state="footer1" data-transition="none">
+					<h2 align="left">Outline</h2><br><br><br><br><br>
+					<ul align="left">
+						<li style="color:lightgray;"> Introduction </li>
+						<li style="color:lightgray;"> What is a Virtual Diagnostic? </li>
+						<li style="color:lightgray;"> The EuXFEL data sources  </li>
+						<li style="color:lightgray;"> Recent VD Applications  </li>
+						<li style="color:black;"> Challenges and Future Prospects </li>
+					</ul><br><br><br>
+				</section>
 
 				<section data-state="footer1" data-transition="fade-in">
 					<h2 align="left">Challenges and Future Prospects</h2><br><br><br><br>
