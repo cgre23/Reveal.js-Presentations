@@ -71,7 +71,7 @@
 				<section data-state="footer1">
 					<h2 align="left">Introduction</h2><br><br><br><br><br>
 					<ul align="left">
-						<li class="fragment"> X-ray FEL control and optimization requires detailed and on-the-fly insight on the driving electron beam. </li>
+						<li class="fragment"> FEL control and tuning requires detailed and on-the-fly insight on the driving electron beam. </li>
 						<li class="fragment"> Increasing demands for high intensity and very short pulse duration pose a challenge for the effectiveness, and accuracy of traditional diagnostic methods. </li>
 						<li class="fragment"> This requires an update to the current suite of diagnostics.</li>
 					</ul>
@@ -181,12 +181,12 @@
 						</ul>
 					</div>
 					<div style="font-size:13px; text-align:right;"><br>
-						Application of machine learning in longitudinal phase space prediction at the European XFEL. In Proc. FEL’22, Trieste, Italy, WEP12
+						Application of machine learning in longitudinal phase space prediction at the European XFEL. In Proc. FEL’22, Trieste, Italy, WEP12.
 					</div>
 				</section>
 
 				<section data-state="footer1">
-					<h2 style="font-size:42px;" text-align="left">Current, LPS reconstruction based on CRISP data </h2><br><br>
+					<h2 style="font-size:40px;" text-align="left">Current, LPS reconstruction based on CRISP data </h2><br><br>
 					<p style="font-size:28px;color:rgb(241, 143, 13);">J. Kaiser, S. Tomin</p><br>
 					<div class="r-hstack">
 						<img src="./figures/VDcrisp.png" width="3000px">
@@ -198,28 +198,49 @@
 				</section>
 
 				<section data-state="footer1">
-					<h2 text-align="left" style="font-size:48px;font-weight: bold;">Energy Calibration of Bragg crystal setups</h2><br><br>
-					<p style="font-size:28px;color:rgb(241, 143, 13);">C. Grech, G. Geloni, M. Guetg</p>
+					<h2 style="font-size:46px;" text-align="left">Anomaly Detection in SRF cavities </h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">A. Eichler, J. Branlard, J. H. K. Timm, A. Sulc, T. Wilksen</p><br>
 					<div class="r-hstack">
-						<img src="./figures/AbsCalibration.drawio.svg" width="4000px">
+						<div class="r-stack">
+							<img class="fragment current-visible" data-fragment-index="2" src="./figures/eichler1.png" width="430">
+							<img class="fragment current-visible" data-fragment-index="3" src="./figures/eichler1.png" width="430">
+							<img class="fragment" data-fragment-index="4" src="./figures/sulc2.png" width="1200">
+						</div>
 						<ul text-align="justify">
-							<li text-align="justify" style="font-size:24px;" class="fragment"> A measurement model was created using data from historical scans.</li>
-							<li text-align="justify" style="font-size:24px;" class="fragment"> Extracting features from measurements, reflections can be identified using a classifier and the actual photon energy determined.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="2"> A parity space method is implemented, using the generalized likelihood ratio as the residual.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="3"> In contrast to the current quench detection system, different fault types can be distinguished.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="4"> Another method uses LSTMs, detects faults with low false positives/negatives. </li>
 						</ul>
 					</div>
 					<div style="font-size:13px; text-align:right;"><br>
-						Machine Learning Applied for the Calibration of the Hard X-Ray Single-Shot Spectrometer at the European XFEL, in Proc. IPAC'22, Bangkok, Thailand, Jun. 2022, TUPOST046
+						Anomaly Detection at the European XFEL using a Parity Space based Method, arXiv.2202.02051 & A Data-Driven Anomaly Detection on SRF cavities at the European XFEL in Proc. IPAC’22, Bangkok, Thailand, TUPOPT062.
 					</div>
 				</section>
 
 				<section data-state="footer1">
-					<h2 style="font-size:48px;font-weight: bold;">X-Ray Pulse Prediction </h2><br><br>
+					<h2 text-align="left" style="font-size:48px;font-weight: bold;">Energy Calibration of Bragg crystal setups</h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">C. Grech, G. Geloni, M. Guetg</p>
+					<div class="r-hstack">
+						<img src="./figures/AbsCalibration.drawio.svg" width="2400px">
+						<ul text-align="justify">
+							<li text-align="justify" style="font-size:22px;" class="fragment"> A measurement model was created using data from historical scans.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment"> Lines are detected from spectrometer scans.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment"> Reflections can be identified using a classifier and the actual photon energy determined.</li>
+						</ul>
+					</div>
+					<div style="font-size:13px; text-align:right;"><br>
+						Machine Learning Applied for the Calibration of the Hard X-Ray Single-Shot Spectrometer at the European XFEL, in Proc. IPAC'22, Bangkok, Thailand, Jun. 2022, TUPOST046.
+					</div>
+				</section>
+
+				<section data-state="footer1">
+					<h2 style="font-size:48px;font-weight: bold;">X-Ray Pulse Property Prediction </h2><br><br>
 					<p style="font-size:28px;color:rgb(241, 143, 13);">C. Grech, F. Jafarinia, G. Geloni, T. Guest, M. Guetg</p>
 					<div class="r-hstack">
-						<img src="./figures/DL.svg" width="3600px">
+						<img src="./figures/DL.svg" width="3500px">
 						<ul text-align="justify">
-							<li text-align="justify" style="font-size:24px;" class="fragment"> Electron beam trajectory is used to predict photon properties as measured at the experimental halls.</li>
-							<li text-align="justify" style="font-size:24px;" class="fragment"> Measurements at the SASE1 beamline have taken place in collaboration with SPB/SFX and data is being analysed.</li>
+							<li text-align="justify" style="font-size:23px;" class="fragment"> Electron beam trajectory is used to predict photon properties as measured at the experimental halls.</li>
+							<li text-align="justify" style="font-size:23px;" class="fragment"> Measurements at the SASE1 beamline have taken place in collaboration with SPB/SFX and data is being analysed.</li>
 						</ul>
 					</div>
 				</section>
@@ -238,9 +259,9 @@
 				<section data-state="footer1" data-transition="fade-in">
 					<h2 align="left">Challenges and Future Prospects</h2><br><br><br><br><br>
 					<ul>
-						<li class="fragment">Virtual Diagnostics can be used in regular operations at an accelerator facility.</li>
-						<li class="fragment">Moving from a proof-of-concept towards regular deployment.</li>
-						<li class="fragment">Ease-of-access needs to improve to allow widespread use.</li>
+						<li class="fragment" style="font-size:28px;">Virtual Diagnostics can be used in regular operations at an accelerator facility.</li>
+						<li class="fragment" style="font-size:28px;">Moving from a proof-of-concept towards regular deployment.</li>
+						<li class="fragment" style="font-size:28px;">Ease-of-access needs to improve to allow widespread use.</li>
 					</ul><br>
 				</section>
 

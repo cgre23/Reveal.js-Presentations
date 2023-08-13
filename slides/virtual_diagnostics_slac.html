@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Virtual Diagnostics at EuXFEL</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/reveal_override_slac.css" id="theme"/>
+		<link href="./fonts/DesySansOfficeCn-Regular.ttf" rel="stylesheet" id="regular">
+		<link href="./fonts/DesySansOfficeCn-Bold.ttf" rel="stylesheet" id="bold">
+		
+		<script src="plugin/highlight/highlight.js"></script>
+		<style>
+			@import url(./fonts/DesySansOfficeCn-Regular.ttf);
+			@import url(./fonts/DesySansOfficeCn-Bold.ttf);
+			@font-face {
+				font-family: "DesySans";
+				src: url("./Virtual Diagnostics at EuXFEL_files/DesySansOfficeCn-Regular.ttf")  format("truetype");}
+			@font-face {
+				font-family: "DesySansBold";
+				src: url("./Virtual Diagnostics at EuXFEL_files/DesySansOfficeCn-Bold.ttf")  format("truetype");}
+		</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<header style="position: absolute;top: 20px; left: 100px; z-index:500; font-size:10px;"></header>
+			<footer style="position: absolute; bottom: 5%;left: 5%;font-size: 18px; color: rgba(0, 0, 0, 0.5);"></footer>
+			<div class="slides">
+
+				<section>
+					<h2>ML/Modeling activities at EuXFEL</h2><br><br><br><br><br><br><br>
+					<h4 align="left">SLAC National Laboratory, 25.01.2023</h4><br>
+					<p align="left" style="font-size:26px" >Christian Grech, DESY</p><br>
+					<div class="r-hstack">
+						<img src="./logos/Helmholtz.png" width="150" height="30"> 
+						<p style="padding: 0em; background: #fff; margin: 0 18em 0 0em"></p>
+						<img src="./logos/DESY_logo.png" width="120" height="120"> 
+						<p style="padding: 0.2em; background: #fff; margin: 0.2em"></p>
+						<img src="./logos/XFEL.jpg" width="120" height="120">
+					</div><br><br>
+				</section>
+
+				<section data-state="footer1">
+					<h2 align="left">Outline</h2><br><br><br><br><br>
+					<ul align="left">
+						<li class="fragment" style="color:black;"> The EuXFEL data sources  </li>
+						<li class="fragment" style="color:black;"> Recent VD Applications  </li>
+						<li class="fragment" style="color:black;"> Challenges and Future Prospects </li>
+					</ul><br><br><br>
+				</section>
+
+
+				<section data-state="footer1" data-transition="none">
+					<h2 align="left">Outline</h2><br><br><br><br><br>
+					<ul align="left">
+						<li style="color:black;"> The EuXFEL data sources  </li>
+						<li style="color:lightgray;"> Recent VD Applications  </li>
+						<li style="color:lightgray;"> Challenges and Future Prospects </li>
+					</ul><br><br><br>
+				</section>
+
+
+				<section data-state="footer1">
+					<h2 text-align="left">The EuXFEL data sources</h2><br><br><br><br><br>
+					<ul text-align="left">
+						<li class="fragment"> DOOCS control system</li>
+						<ul>
+							<li class="fragment" style="font-size: 22px;">Python and MATLAB interfaces allow live data and history capture.</li>
+						  </ul>
+						<li class="fragment"> DOOCS/Karabo DAQ datastreams</li>
+						<ul>
+							<li class="fragment" style="font-size: 22px;">Collection of channels can be synchronously acquired into a RAW/HDF5 format.</li>
+						  </ul>
+						<li class="fragment"> Machine File Catalog</li>
+						<ul>
+							<li class="fragment" style="font-size: 22px;">Long-term snapshots of machine operation - 30k+ snapshots for the EuXFEL.</li>
+						  </ul>
+					</ul><br>
+				</section>
+
+				<section data-state="footer1" data-transition="none">
+					<h2 align="left">Outline</h2><br><br><br><br><br>
+					<ul align="left">
+						<li style="color:lightgray;"> The EuXFEL data sources  </li>
+						<li style="color:black;"> Recent VD Applications  </li>
+						<li style="color:lightgray;"> Challenges and Future Prospects </li>
+					</ul><br><br><br>
+				</section>
+
+				<section data-state="footer1">
+					<h2 style="font-size:48px;font-weight: bold;">Online Optics Matching at Injection</h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">Z. H. Zhu, S. Tomin, Y. Chen, W. L. Qin, M. Scholz</p>
+					<div class="r-hstack">
+						<div class="r-stack">
+							<img src="./figures/zhu1.png" width="2620" class="fragment current-visible" data-fragment-index="1">
+							<img src="./figures/zhu1.png" width="2620" class="fragment current-visible" data-fragment-index="2">
+							<img src="./figures/zhu4.png" width="2620" class="fragment current-visible" data-fragment-index="3">
+							<img src="./figures/zhu5.png" width="2820" height="400" class="fragment current-visible" data-fragment-index="4">
+						</div>
+						<ul text-align="justify">
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="1"> Surrogate model based on a deep neural network architecture.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="2"> Model is trained with 190,000 simulation results.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="4"> Tested in the control room and verified with OCELOT simulations and optics measurements. </li>
+						</ul>
+					</div>
+					<div style="font-size:13px; text-align:right;"><br>
+						Machine learning based surrogate model construction for optics matching at the European XFEL. In Proc. IPAC’22, Bangkok, Thailand,  MOPOTK013
+					</div>
+				</section>
+
+
+				<section data-state="footer1">
+					<h2 style="font-size:48px;font-weight: bold;">Longitudinal Phase Space Prediction</h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">Z. H. Zhu, S. Tomin, J. Kaiser</p>
+					<div class="r-hstack">
+						<div class="r-stack">
+							<img class="fragment fade-in" data-fragment-index="1" src="./figures/zhu2.png" width="2100">
+							<img class="fragment" data-fragment-index="4" src="./figures/zhu3.png" width="2100">
+						</div>
+						<ul text-align="justify">
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="2"> Beam distribution simulated with ASTRA and OCELOT.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="3"> Three slice beam property distributions are predicted using an ANN. Fast but performance can be enhanced.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="5"> Using a Convolutional Encoder-Decoder, one can obtain better results but with a slower training time. </li>
+						</ul>
+					</div>
+					<div style="font-size:13px; text-align:right;"><br>
+						Application of machine learning in longitudinal phase space prediction at the European XFEL. In Proc. FEL’22, Trieste, Italy, WEP12.
+					</div>
+				</section>
+
+				<section data-state="footer1">
+					<h2 style="font-size:40px;" text-align="left">Current, LPS reconstruction based on CRISP data </h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">J. Kaiser, S. Tomin</p><br>
+					<div class="r-hstack">
+						<img src="./figures/VDcrisp.png" width="3000px">
+						<ul text-align="justify">
+							<li text-align="justify" style="font-size:22px;" class="fragment"> Two Artificial Neural Networks are used to reconstruct the current from the RF settings and the THz spectrum.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment"> A second bunch length predictor allows for the reconstruction to resolve both long and short bunches.</li>
+						</ul>
+					</div><br>
+				</section>
+
+				<section data-state="footer1">
+					<h2 style="font-size:46px;" text-align="left">Anomaly Detection in SRF cavities </h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">A. Eichler, J. Branlard, J. H. K. Timm, A. Sulc, T. Wilksen</p><br>
+					<div class="r-hstack">
+						<div class="r-stack">
+							<img class="fragment current-visible" data-fragment-index="2" src="./figures/eichler1.png" width="430">
+							<img class="fragment current-visible" data-fragment-index="3" src="./figures/eichler1.png" width="430">
+							<img class="fragment" data-fragment-index="4" src="./figures/sulc2.png" width="1200">
+						</div>
+						<ul text-align="justify">
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="2"> A parity space method is implemented, using the generalized likelihood ratio as the residual.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="3"> In contrast to the current quench detection system, different fault types can be distinguished.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment" data-fragment-index="4"> Another method uses LSTMs, detects faults with low false positives/negatives. </li>
+						</ul>
+					</div>
+					<div style="font-size:13px; text-align:right;"><br>
+						Anomaly Detection at the European XFEL using a Parity Space based Method, arXiv.2202.02051 & A Data-Driven Anomaly Detection on SRF cavities at the European XFEL in Proc. IPAC’22, Bangkok, Thailand, TUPOPT062.
+					</div>
+				</section>
+
+				<section data-state="footer1">
+					<h2 text-align="left" style="font-size:48px;font-weight: bold;">Energy Calibration of Bragg crystal setups</h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">C. Grech, G. Geloni, M. Guetg</p>
+					<div class="r-hstack">
+						<img src="./figures/AbsCalibration.drawio.svg" width="2400px">
+						<ul text-align="justify">
+							<li text-align="justify" style="font-size:22px;" class="fragment"> A measurement model was created using data from historical scans.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment"> Lines are detected from spectrometer scans.</li>
+							<li text-align="justify" style="font-size:22px;" class="fragment"> Reflections can be identified using a classifier and the actual photon energy determined.</li>
+						</ul>
+					</div>
+					<div style="font-size:13px; text-align:right;"><br>
+						Machine Learning Applied for the Calibration of the Hard X-Ray Single-Shot Spectrometer at the European XFEL, in Proc. IPAC'22, Bangkok, Thailand, Jun. 2022, TUPOST046.
+					</div>
+				</section>
+
+				<section data-state="footer1">
+					<h2 style="font-size:48px;font-weight: bold;">X-Ray Pulse Property Prediction </h2><br><br>
+					<p style="font-size:28px;color:rgb(241, 143, 13);">C. Grech, F. Jafarinia, G. Geloni, T. Guest, M. Guetg</p>
+					<div class="r-hstack">
+						<img src="./figures/DL.svg" width="3500px">
+						<ul text-align="justify">
+							<li text-align="justify" style="font-size:23px;" class="fragment"> Electron beam trajectory is used to predict photon properties as measured at the experimental halls.</li>
+							<li text-align="justify" style="font-size:23px;" class="fragment"> Measurements at the SASE1 beamline have taken place in collaboration with SPB/SFX and data is being analysed.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section data-state="footer1" data-transition="none">
+					<h2 align="left">Outline</h2><br><br><br><br><br>
+					<ul align="left">
+						<li style="color:lightgray;"> The EuXFEL data sources  </li>
+						<li style="color:lightgray;"> Recent VD Applications  </li>
+						<li style="color:black;"> Challenges and Future Prospects </li>
+					</ul><br><br><br>
+				</section>
+
+				<section data-state="footer1" data-transition="fade-in">
+					<h2 align="left">Challenges and Future Prospects</h2><br><br><br><br><br>
+					<ul>
+						<li class="fragment" style="font-size:28px;">ML for virtual diagnostics can be used in regular operations at an accelerator facility.</li>
+						<li class="fragment" style="font-size:28px;">Moving from a proof-of-concept towards regular deployment.</li>
+						<li class="fragment" style="font-size:28px;">Ease-of-access needs to improve to allow widespread use.</li>
+					</ul><br>
+				</section>
+
+				<section data-background="#009fdf">
+					<br><br><br><br><br><br>
+					<p style="font-size:48px;font-weight: bold;">Questions?</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				margin: 0.08,
+				width: 860,
+  				height: 700,
+				center: true,
+				hash: true,
+				plugins: [ RevealHighlight ],
+				slideNumber: 'c/t',
+				transition: 'slide' // none/fade/slide/convex/concave/zoom
+			});
+		</script>
+
+		<style type="text/css">
+			/* 1. Style header/footer <div> so they are positioned as desired. */
+			#header-left {
+				position: absolute;
+				top: 0%;
+				left: 0%;
+			}
+			#header-right {
+				position: absolute;
+				top: 0%;
+				right: 0%;
+			}
+			#footer-left {
+				position: absolute;
+				bottom: 2%;
+				left: 2%;
+				font-size: 18px;
+				color: rgba(0, 0, 0, 0.5);
+			}
+		</style>
+
+		<!-- 2. Create hidden header/footer <div> -->
+		<!--<div id="hidden" style="display:none;">
+			<div id="header">
+				<div id="footer-left">Virtual Diagnostics at EuXFEL | Christian Grech, MXL, 21.11.2022 </div>
+			</div>
+		</div> 
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+			// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+			var header = $('#header').html();
+			if ( window.location.search.match( /print-pdf/gi ) ) {
+				Reveal.addEventListener( 'ready', function( event ) {
+					$('.slide-background').append(header);
+				});
+			}
+			else {
+				$('div.reveal').append(header);
+		}
+		</script> -->
+	</body>
+</html>
